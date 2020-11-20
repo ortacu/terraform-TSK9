@@ -12,9 +12,8 @@ module "VPC" {
   tags = {
     Name        = "VPC_Project"
     Environment = "Dev"
-    Team        = "DevOps"
-    Department  = "Operations"
-    Bill        = "CFO"
-    Quarter     = "1"
+    Team        = "Infrastructure"
+    Department  = "IT"
+    Created_by  = "Tudor Ciupe"
   }
 }

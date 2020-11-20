@@ -1,5 +1,5 @@
-resource "aws_security_group" "VPC_PROJECT" {
-  name        = "VPC_PROJECT"
+resource "aws_security_group" "apache" {
+  name        = "apache"
   description = "Allow TLS inbound traffic"
 
   ingress {
@@ -27,3 +27,16 @@ resource "aws_security_group" "VPC_PROJECT" {
 
   tags = "${var.tags}"
 }
+
+
+resource "aws_security_group" "mysql" {
+  name        = "mysql"
+  description = "Allow TLS inbound traffic"
+
+  ingress {
+    description = "Allow ssh"
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
