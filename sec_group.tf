@@ -24,7 +24,6 @@ resource "aws_security_group" "apache" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
   tags = "${var.tags}"
 }
 
@@ -40,3 +39,5 @@ resource "aws_security_group" "mysql" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  tags       = "${var.tags}"
+}  

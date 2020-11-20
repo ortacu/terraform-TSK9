@@ -10,6 +10,7 @@ data "aws_instance" "apache" {
     name   = "tag:Name"
     values = ["instance-name-tag"]
   }
+  tags       = "${var.tags}"
 }
 
 
@@ -25,4 +26,5 @@ data "aws_instance" "mysql" {
     name   = "tag:Name"
     values = ["instance-name-tag"]
   }
+  tags       = "${var.tags}"
 }
