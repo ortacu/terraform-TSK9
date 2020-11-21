@@ -1,5 +1,5 @@
 data "aws_instance" "apache" {
-  instance_id = "i-instanceid"
+  instance_id = "web"
 
   filter {
     name   = "image-id"
@@ -15,7 +15,7 @@ data "aws_instance" "apache" {
 
 
 data "aws_instance" "mysql" {
-  instance_id = "i-instanceid"
+  instance_id = "mysql"
 
   filter {
     name   = "image-id"
